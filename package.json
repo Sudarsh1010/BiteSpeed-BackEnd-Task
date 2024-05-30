@@ -1,0 +1,17 @@
+{
+	"scripts": {
+		"dev": "wrangler dev src/index.ts",
+		"deploy": "wrangler deploy --minify src/index.ts",
+		"db:generate": "drizzle-kit generate",
+		"db:studio": "drizzle-kit studio",
+		"db:migrate": "bunx wrangler d1 execute bite-speed",
+		"up": "drizzle-kit up"
+	},
+	"dependencies": {
+		"hono": "^4.4.0"
+	},
+	"devDependencies": {
+		"@cloudflare/workers-types": "^4.20240403.0",
+		"wrangler": "^3.47.0"
+	}
+}
